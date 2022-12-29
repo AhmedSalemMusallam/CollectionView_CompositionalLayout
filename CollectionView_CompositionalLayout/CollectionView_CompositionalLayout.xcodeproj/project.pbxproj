@@ -13,6 +13,7 @@
 		5BD3E0AC295C26CF00685DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD3E0AA295C26CF00685DE0 /* Main.storyboard */; };
 		5BD3E0AE295C26D000685DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD3E0AD295C26D000685DE0 /* Assets.xcassets */; };
 		5BD3E0B1295C26D000685DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD3E0AF295C26D000685DE0 /* LaunchScreen.storyboard */; };
+		5BD47C81295DB57A0094ED02 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD47C80295DB57A0094ED02 /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5BD3E0AD295C26D000685DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BD3E0B0295C26D000685DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BD3E0B2295C26D000685DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BD47C80295DB57A0094ED02 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		5BD3E0A3295C26CF00685DE0 /* CollectionView_CompositionalLayout */ = {
 			isa = PBXGroup;
 			children = (
+				5BD47C7F295DB5390094ED02 /* CollectionViewCell */,
 				5BD3E0A4295C26CF00685DE0 /* AppDelegate.swift */,
 				5BD3E0A6295C26CF00685DE0 /* SceneDelegate.swift */,
 				5BD3E0A8295C26CF00685DE0 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				5BD3E0B2295C26D000685DE0 /* Info.plist */,
 			);
 			path = CollectionView_CompositionalLayout;
+			sourceTree = "<group>";
+		};
+		5BD47C7F295DB5390094ED02 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5BD47C80295DB57A0094ED02 /* MyCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				5BD3E0A9295C26CF00685DE0 /* ViewController.swift in Sources */,
 				5BD3E0A5295C26CF00685DE0 /* AppDelegate.swift in Sources */,
+				5BD47C81295DB57A0094ED02 /* MyCollectionViewCell.swift in Sources */,
 				5BD3E0A7295C26CF00685DE0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
