@@ -9,8 +9,50 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private let collectionView = UICollectionView(frame:.zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let collectionView = UICollectionView(frame:.zero, collectionViewLayout: ViewController.createLayout())
     
+    
+    //function to create compositional layout
+    static func createLayout() -> UICollectionViewCompositionalLayout{
+        //Item
+        let item = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(2/3),
+                heightDimension: .fractionalHeight(1))
+        )
+        
+        //vertical stck item
+        let verticalStackItem = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(0.5)
+            )
+        )
+        
+        // vertical Stack group
+        let verticalStackGroup = NSCollectionLayoutGroup.vertical(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1/3),
+                heightDimension: .fractionalHeight(1)
+            ),
+            repeatingSubitem: verticalStackItem,
+            count: 2
+        )
+        //Group
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .fractionalWidth(3/5)), subitems: [
+                item,
+                verticalStackGroup
+            ])
+            
+        
+        //Sections
+        let section = NSCollectionLayoutSection(group: group)
+        
+        //Return
+        return UICollectionViewCompositionalLayout(section: section)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
